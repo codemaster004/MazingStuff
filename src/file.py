@@ -211,5 +211,7 @@ class GenerateMaze:
 
 
 if __name__ == '__main__':
-	maze = GenerateMaze(6, 8)
+	maze = GenerateMaze(*MAZE_SIZE)
 	maze.generate_maze()
+	
+	np.save("assets/maze.npy", maze.maze_grid)
